@@ -1,0 +1,144 @@
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('../fonts/Bebas_Neue/BebasNeue-Regular.ttf') format('truetype');
+}
+
+:root {
+    --text-color: rgb(255, 255, 255);
+    --text-shadow: 0 0 10px #999999, 0 0 20px #fff, 0 0 30px #ffffff, 0 0 40px #ffffff;
+    --background-color: rgba(0, 0, 0, 0.5);
+    --background-color-hover: rgba(0, 0, 0, 0.7);
+    --font-size-large: 2rem;
+    --font-size-xlarge: 3.5rem;
+    --font-size-xmlarge: 10rem;
+    --font-size-xxlarge: 15rem;
+    --padding: 1rem;
+    --margin: 0.5rem 0;
+    --border-radius: 10px;
+    --gap: 1rem;
+    --width: 20rem;
+    --height: 27rem;
+    --rotate-angle: -15deg;
+}
+
+* {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: bold;
+    text-shadow: var(--text-shadow);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('../img/bg.png');
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--padding);
+}
+
+header select {
+    font-size: var(--font-size-large);
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+    text-shadow: none;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+header select:focus {
+    background-color: var(--background-color-hover);
+    opacity: 1;
+}
+
+header select:hover {
+    background-color: var(--background-color-hover);
+    opacity: 1;
+}
+
+select option {
+    font-size: var(--font-size-large);
+    font-family: 'Bebas Neue', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    text-shadow: none;
+    color: var(--text-color);
+}
+
+h1 {
+    font-size: var(--font-size-xxlarge);
+    text-align: center;
+    margin: var(--margin);
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap);
+    padding: var(--padding);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card .imgs {
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--border-radius);
+    width: var(--width);
+    height: var(--height);
+}
+
+.imgs .img {
+    border-radius: var(--border-radius);
+    width: var(--width);
+    height: var(--height);
+    background-size: cover;
+    background-position: center;
+    margin: var(--margin);
+    box-shadow: inset 0 0 20px #0000006e;
+}
+
+.img .comment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: var(--font-size-xlarge);
+}
+
+.card h2 {
+    display: flex;
+    justify-content: center;
+    font-size: var(--font-size-xlarge);
+    margin: var(--margin);
+}
+
+.card .time {
+    position: relative;
+    top: -50px;
+    transform: translate(-50%, -50%);
+    font-size: var(--font-size-xlarge);
+    transform: rotate(var(--rotate-angle));
+}
+
+@media screen and (max-width: 1030px) {
+    h1 {
+        font-size: var(--font-size-xmlarge);
+    }
+}
